@@ -6,6 +6,9 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "bcrypt": "^5.0.0",
+    "cookie": "^0.4.1",
+    "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.8",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -16,6 +19,7 @@
     "build": "run-p build:**",
     "build:app": "react-scripts build",
     "build:lambda": "netlify-lambda build src/lambda",
+    "dev": "netlify dev",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-css": "postcss src/styles/tailwind.css -o public/build/tailwind.css"
