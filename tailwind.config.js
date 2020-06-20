@@ -1,8 +1,15 @@
 module.exports = {
   purge: [],
   theme: {
-    extend: {},
+    fontFamily: {
+      body: ["Apercu Pro Regular"],
+    },
+    extend: {
+      colors: {
+        primary: "#2660A4",
+      },
+    },
   },
   variants: {},
   plugins: [],
-}
+};

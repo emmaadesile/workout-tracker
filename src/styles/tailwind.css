@@ -1,5 +1,26 @@
 @tailwind base;
 
+@font-face {
+  font-family: "Apercu Pro Regular";
+  font-weight: 400;
+  src: url(./fonts/Apercu-Pro-Regular.otf);
+}
+@font-face {
+  font-family: "Apercu Pro Light";
+  font-weight: 300;
+  src: url(./fonts/Apercu-Pro-Light.otf);
+}
+@font-face {
+  font-family: "Apercu Pro Medium";
+  font-weight: 600;
+  src: url(./fonts/Apercu-Pro-Medium.otf);
+}
+@font-face {
+  font-family: "Apercu Pro Bold";
+  font-weight: 700;
+  src: url(./fonts/Apercu-Pro-Bold.otf);
+}
+
 @tailwind components;
 
 @tailwind utilities;
