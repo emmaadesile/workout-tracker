@@ -1,12 +1,9 @@
-import React from 'react';
-import { Router } from "@reach/router";
-import Home from "./pages/hompage";
+import React from "react";
+import UnauthenticatedApp from "./unauthenticatedApp";
 
 function App() {
   return (
-    <Router>
-      <Home path="/" />
-    </Router>
+    <UnauthenticatedApp path="/" />
   );
 }
 

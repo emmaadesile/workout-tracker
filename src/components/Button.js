@@ -11,7 +11,7 @@ const StyledButton = styled.button`
 
 const Button = ({ name, type }) => (
   <StyledButton
-    className="container border rounded-full mt-4 p-3 text-center"
+    className="container border rounded-md mt-4 p-3 text-center font-bold"
     type={type}
   >
     {name}
