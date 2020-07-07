@@ -13,15 +13,22 @@ const Container = styled.div`
   background: ${colors.almostWhite};
 `;
 
+const AppWrapper = styled.main`
+  padding-left: 5rem;
+  margin-top: 3.3rem;
+`;
+
 function AuthenticatedApp() {
   return (
     <Container>
       <SideBar />
       <div>
         <Nav authenticated={true} />
-        <Router>
-          <Dashboard path="/" />
-        </Router>
+        <AppWrapper>
+          <Router>
+            <Dashboard path="/" />
+          </Router>
+        </AppWrapper>
       </div>
     </Container>
   );
