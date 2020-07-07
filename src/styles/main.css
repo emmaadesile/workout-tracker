@@ -6111,7 +6111,7 @@ video {
 }
 
 .font-body {
-  font-family: Apercu Pro Regular;
+  font-family: Apercu Pro Regular, Apercu Pro Medium, Apercu Pro Bold;
 }
 
 .font-hairline {
@@ -19913,7 +19913,7 @@ video {
   }
 
   .sm\:font-body {
-    font-family: Apercu Pro Regular;
+    font-family: Apercu Pro Regular, Apercu Pro Medium, Apercu Pro Bold;
   }
 
   .sm\:font-hairline {
@@ -33716,7 +33716,7 @@ video {
   }
 
   .md\:font-body {
-    font-family: Apercu Pro Regular;
+    font-family: Apercu Pro Regular, Apercu Pro Medium, Apercu Pro Bold;
   }
 
   .md\:font-hairline {
@@ -47519,7 +47519,7 @@ video {
   }
 
   .lg\:font-body {
-    font-family: Apercu Pro Regular;
+    font-family: Apercu Pro Regular, Apercu Pro Medium, Apercu Pro Bold;
   }
 
   .lg\:font-hairline {
@@ -61322,7 +61322,7 @@ video {
   }
 
   .xl\:font-body {
-    font-family: Apercu Pro Regular;
+    font-family: Apercu Pro Regular, Apercu Pro Medium, Apercu Pro Bold;
   }
 
   .xl\:font-hairline {

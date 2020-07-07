@@ -1,17 +1,30 @@
-import React from 'react';
+import React from "react";
+import { Router } from "@reach/router";
 import styled from "styled-components";
+import Dashboard from "./pages/dashboard";
+import SideBar from "./components/SideBar";
+import Nav from "./components/Nav";
+import { colors } from "./styles/theme";
 
 const Container = styled.div`
   height: 100vh;
-  place-items: center;
-`
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background: ${colors.almostWhite};
+`;
 
 function AuthenticatedApp() {
   return (
     <Container>
-      Welcome Jason Memoa
+      <SideBar />
+      <div>
+        <Nav authenticated={true} />
+        <Router>
+          <Dashboard path="/" />
+        </Router>
+      </div>
     </Container>
-  )
+  );
 }
 
 export default AuthenticatedApp;

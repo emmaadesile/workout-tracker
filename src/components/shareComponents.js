@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../styles/theme";
 
 const Container = styled.div`
   display: grid;
@@ -12,6 +13,12 @@ const Container = styled.div`
 
 const StyledSpan = styled.span`
   cursor: pointer;
-`
+`;
 
-export { Container, StyledSpan };
+const Title = styled.h1`
+  font-size: 1rem;
+  color: ${colors.dark};
+  font-weight: bold;
+`;
+
+export { Container, StyledSpan, Title };
