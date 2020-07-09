@@ -22,9 +22,9 @@ function AuthenticatedApp() {
       <SideBar />
       <AppWrapper>
         <Nav authenticated={true} />
-        <Router>
+        {/* <Router>
           <Dashboard path="/" />
-        </Router>
+        </Router> */}
       </AppWrapper>
     </Container>
   );
