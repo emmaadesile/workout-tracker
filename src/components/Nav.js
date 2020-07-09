@@ -59,7 +59,6 @@ const NavItems = styled.div`
 
 const Nav = ({ authenticated }) => (
   <StyledNav className="mx-auto flex items-center justify-center">
-    {/* <div className="flex flex-col items-center justify-center"> */}
       {!authenticated && <Logo />}
       <NavItems>
         <PageName>Dashboard</PageName>
@@ -71,7 +70,6 @@ const Nav = ({ authenticated }) => (
           <ArrowDown />
         </UserProfile>
       </NavItems>
-    {/* </div> */}
   </StyledNav>
 );
 

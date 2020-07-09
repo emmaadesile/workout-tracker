@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from '@reach/router'
 import { Title } from "../components/shareComponents";
 import Card from "../components/Card";
 import { Gym, Badge, Arms, Run, Abs } from "../icons";
@@ -63,6 +64,16 @@ const NewWorkoutCard = styled.div`
   }
 `;
 
+const StyledRow = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    color: #444;
+  }
+`;
+
 const cards = [
   { name: "Cardio", icon: <Run /> },
   { name: "Arms", icon: <Arms /> },
@@ -106,7 +117,11 @@ const Dashboard = () => {
         ))}
       </WorkoutCardWrapper>
 
-      <Title>Recent Workouts</Title>
+      <StyledRow>
+        <Title>Recent Workouts</Title>
+        <Link to="/">View all</Link>
+      </StyledRow>
+
       <RecentWorkouts />
     </React.Fragment>
   );
