@@ -14,8 +14,9 @@ function LoginForm({ handleSubmit, switchForm }) {
     <Container>
       <form className="container" onSubmit={handleSubmit}>
         <div className="grid mb-5">
-          <label className="mb-1">Email Address</label>
+          <label htmlFor="email" className="mb-1">Email Address</label>
           <input
+            id="email"
             type="email"
             className="border rounded-md border-gray-400 py-3 px-4"
             value={email}
@@ -25,7 +26,7 @@ function LoginForm({ handleSubmit, switchForm }) {
 
         <div className="grid mb-5">
           <span className="flex justify-between">
-            <label className="mb-1">Password</label>
+            <label htmlFor="password" className="mb-1">Password</label>
             <StyledSpan
               className="flex justify-center"
               onClick={() => setShowPassword(!showPassword)}
@@ -37,6 +38,7 @@ function LoginForm({ handleSubmit, switchForm }) {
             </StyledSpan>
           </span>
           <input
+            id="password"
             type={showPassword ? "text" : "password"}
             className="border rounded-md border-gray-400 py-3 px-4"
             value={password}

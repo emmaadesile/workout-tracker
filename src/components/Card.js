@@ -12,7 +12,7 @@ const StyledCard = styled.div`
   transition: all 300ms ease-in-out;
 
   &:hover {
-    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.2);
     transform: translateY(-0.5rem);
   }
 `;
@@ -20,4 +20,5 @@ const StyledCard = styled.div`
 const Card = ({ children, background }) => (
   <StyledCard background={background}>{children}</StyledCard>
 );
+
 export default Card;

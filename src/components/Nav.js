@@ -5,11 +5,13 @@ import { colors } from "../styles/theme";
 import "../styles/main.css";
 
 const StyledNav = styled.nav`
-  height: 90px;
-  width: ${({ authenticated }) =>
-    authenticated ? "calc(100vw - 230px)" : "100%"};
+  height: 80px;
+  position: sticky;
+  top: 0;
+  border-radius: 10px;
   background: #fff;
   padding: 0 2.5rem 0 5rem;
+  z-index: 999;
 `;
 
 const PageName = styled.h2`

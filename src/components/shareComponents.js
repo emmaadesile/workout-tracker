@@ -19,6 +19,8 @@ const Title = styled.h1`
   font-size: 1rem;
   color: ${colors.dark};
   font-weight: bold;
+  margin-top: 3.5rem;
+  margin-bottom: 1.5rem;
 `;
 
 export { Container, StyledSpan, Title };

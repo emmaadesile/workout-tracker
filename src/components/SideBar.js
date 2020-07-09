@@ -16,10 +16,13 @@ const Container = styled.div`
 `;
 
 const StyledSideBar = styled.ul`
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* position: fixed; */
   width: 230px;
   box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.06);
   padding: 0 1.5rem;
@@ -38,10 +41,10 @@ const SidebarItem = styled.li`
   cursor: pointer;
   padding: 0.5rem 0.9rem;
   border-radius: 5px;
-  /* font-size: 'Apercu Pro Regular'; */
   
   p {
     color: ${colors.faintGrey};
+    font-size: 0.95rem;
   }
 
   &:hover,

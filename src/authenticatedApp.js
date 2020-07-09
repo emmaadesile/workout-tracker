@@ -7,14 +7,12 @@ import Nav from "./components/Nav";
 import { colors } from "./styles/theme";
 
 const Container = styled.div`
-  height: 100vh;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
   background: ${colors.almostWhite};
 `;
 
 const AppWrapper = styled.main`
-  padding-left: 5rem;
+  margin-left: 300px;
   margin-top: 3.3rem;
 `;
 
@@ -22,14 +20,12 @@ function AuthenticatedApp() {
   return (
     <Container>
       <SideBar />
-      <div>
+      <AppWrapper>
         <Nav authenticated={true} />
-        <AppWrapper>
-          <Router>
-            <Dashboard path="/" />
-          </Router>
-        </AppWrapper>
-      </div>
+        <Router>
+          <Dashboard path="/" />
+        </Router>
+      </AppWrapper>
     </Container>
   );
 }

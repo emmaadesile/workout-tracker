@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { Title } from "../components/shareComponents";
 import Card from "../components/Card";
-import { Gym, Badge } from "../icons";
+import { Gym, Badge, Arms, Run, Abs } from "../icons";
 import { colors } from "../styles/theme";
+import RecentWorkouts from "../components/RecentWorkout";
+import { WorkoutCard, WorkoutCardWrapper } from "../components/WorkoutCard";
 
 const CardWrapper = styled.div`
   display: flex;
   margin-top: 1.25rem;
-  margin-bottom: 3.5rem;
 
   & * {
     margin-right: 2.5rem;
@@ -52,6 +53,7 @@ const NewWorkoutCard = styled.div`
   background: ${colors.white};
   width: 20.6rem;
   height: 12.5rem;
+  cursor: pointer;
   border-radius: 10px;
   transition: all 300ms ease-in-out;
 
@@ -60,6 +62,13 @@ const NewWorkoutCard = styled.div`
     transform: translateY(-0.5rem);
   }
 `;
+
+const cards = [
+  { name: "Cardio", icon: <Run /> },
+  { name: "Arms", icon: <Arms /> },
+  { name: "Abs", icon: <Abs /> },
+  { name: "Legs", icon: <Run /> },
+];
 
 const Dashboard = () => {
   return (
@@ -88,8 +97,17 @@ const Dashboard = () => {
       </CardWrapper>
 
       <Title>Workout Routines</Title>
+      <WorkoutCardWrapper>
+        {cards.map((card, index) => (
+          <WorkoutCard key={index}>
+            <p>{card.name}</p>
+            <div>{card.icon}</div>
+          </WorkoutCard>
+        ))}
+      </WorkoutCardWrapper>
 
-
+      <Title>Recent Workouts</Title>
+      <RecentWorkouts />
     </React.Fragment>
   );
 };

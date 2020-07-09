@@ -9,6 +9,9 @@ import Settings from "./Settings";
 import ArrowDown from "./ArrowDown";
 import Gym from "./Gym";
 import Badge from "./Badge";
+import Arms from "./Arms";
+import Abs from "./Abs";
+import Run from "./Run";
 
 export {
   Clipboard,
@@ -22,4 +25,7 @@ export {
   ArrowDown,
   Gym,
   Badge,
+  Arms,
+  Abs,
+  Run,
 };
