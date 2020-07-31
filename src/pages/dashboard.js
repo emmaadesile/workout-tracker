@@ -68,6 +68,7 @@ const StyledRow = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* margin-bottom: 3rem; */
 
   a {
     color: #444;
@@ -87,7 +88,7 @@ const Dashboard = () => {
       <Title>Overview</Title>
       <CardWrapper>
         <NewWorkoutCard>
-          <NewWorkOutText>+ Add New Workout</NewWorkOutText>
+          <NewWorkOutText>+ Start New Workout</NewWorkOutText>
         </NewWorkoutCard>
         <Card background={colors.primaryColor2}>
           <HeadText>Workouts Completed</HeadText>

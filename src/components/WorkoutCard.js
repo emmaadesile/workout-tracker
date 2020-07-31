@@ -25,7 +25,7 @@ const StyledCard = styled.div`
 
   &:hover {
     box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.05);
-    transform: translateY(-0.5rem);  
+    transform: translateY(-0.2rem);  
   }
 
   p {

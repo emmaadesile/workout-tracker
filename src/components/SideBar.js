@@ -27,7 +27,7 @@ const StyledSideBar = styled.ul`
   box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.06);
   padding: 0 1.5rem;
   background: ${colors.white};
-  `;
+`;
 
 const SidebarItem = styled.li`
   width: 100%;
@@ -39,13 +39,18 @@ const SidebarItem = styled.li`
   margin-bottom: 1.3rem;
   transition: background 200ms ease-in-out;
   cursor: pointer;
-  padding: 0.5rem 0.9rem;
+  padding: 0.8rem 0.9rem;
   border-radius: 5px;
-  
+  background: ${({ active }) => (active ? colors.activeColor : "")};
+
   p {
-    color: ${colors.faintGrey};
+    color: ${({active}) => active ? colors.primaryColor : colors.faintGrey};
     font-size: 0.95rem;
   }
+
+  /* svg {
+    fill: ${({active}) => active ? colors.primaryColor : colors.faintGrey};
+  } */
 
   &:hover,
   &:active {
@@ -68,7 +73,7 @@ const SideBar = () => {
         <LogoWrapper>
           <Logo />
         </LogoWrapper>
-        <SidebarItem>
+        <SidebarItem active={true} >
           <Dashboard />
           <p>Dashboard</p>
         </SidebarItem>

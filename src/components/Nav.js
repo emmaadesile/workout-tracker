@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Logo, ArrowDown } from "../icons";
 import { colors } from "../styles/theme";
+import Button from "../components/LoginButton";
 import "../styles/main.css";
 
 const StyledNav = styled.nav`
@@ -10,7 +11,8 @@ const StyledNav = styled.nav`
   top: 0;
   border-radius: 10px;
   background: #fff;
-  padding: 0 2.5rem 0 5rem;
+  padding: 2.5rem 0;
+  /* padding-right: 2rem; */
   z-index: 999;
 `;
 
@@ -24,6 +26,7 @@ const PageName = styled.h2`
 const UserProfile = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
 
   & > * {
     margin-left: 8px;
@@ -55,21 +58,49 @@ const NavItems = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 2rem;
+`;
+
+const AuthNavItem = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  div {
+    display: flex;
+    align-items: center;
+    color: #4559aa;
+    font-size: 0.95rem;
+
+    button {
+      margin-left: 2rem;
+    }
+  }
 `;
 
 const Nav = ({ authenticated }) => (
   <StyledNav className="mx-auto flex items-center justify-center">
-      {!authenticated && <Logo />}
+    {!authenticated ? (
+      <AuthNavItem>
+        <Logo />
+        <div>
+          <p>About</p>
+          <Button text="Register" />
+        </div>
+      </AuthNavItem>
+    ) : (
       <NavItems>
         <PageName>Dashboard</PageName>
         <UserProfile>
           <UserInitials>
             <p>J</p>
           </UserInitials>
-          <Username>Jason</Username>
+          <Username>Jason Mamoa</Username>
           <ArrowDown />
         </UserProfile>
       </NavItems>
+    )}
   </StyledNav>
 );
 
